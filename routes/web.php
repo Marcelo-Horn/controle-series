@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/series', 'SeriesController@index');
 
-Route::get('/series/add', 'SeriesController@create');
+Route::get('/series', 'SeriesController@index')->name('series_list');
+Route::get('/series/add', 'SeriesController@create')->name('form_insert_serie');
+Route::post('/series/add', 'SeriesController@store');
+Route::post('/series/rm/{id}', 'SeriesController@destroy');
+Route::post('/series/{id}/nameUpdate', 'SeriesController@nameUpdate');
+
+Route::get('/series/{serieId}/seasons', 'SeasonsController@index');
