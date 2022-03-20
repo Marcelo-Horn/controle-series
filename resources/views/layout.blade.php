@@ -12,7 +12,7 @@
 
 <body>
     <nav class="navbar navbar-dark bg-dark mb-2">
-    <a class="navbar-brand" href="/series">Home</a>
+        <a class="navbar-brand" href="/series">Home</a>
     </nav>
 
     <div class="container">

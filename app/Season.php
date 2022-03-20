@@ -18,4 +18,10 @@ class Season extends Model
     {
         return $this->belongsTo(Serie::class);
     }
+    public function getWatchedEpisodes()
+    {
+        return $this->episodes->filter(function (Episode $episode) {
+            return $episode->assistido;
+        });
+    }
 }
